@@ -205,8 +205,12 @@ ul {
     border-radius: 15px;
 }
 .cont_add p, h6{
-  line-height: 40px;
+  line-height: 30px;
 }
+.cont_add p{
+  margin-top: -5%;
+}
+
 img.mfp-img {
   -webkit-box-shadow: 0 2px 40px 8px rgba(15, 15, 15, 0.15);
   box-shadow: 0 2px 40px 8px rgba(15, 15, 15, 0.15); }
@@ -510,7 +514,10 @@ input:required {
   height: 40px;
   bottom: 40px;
   background-color: #df42b1;
-  background-image: url("img/core-img/arrow-up.png");
+  background-image: url(img/core-img/arrow_up.png);
+  background-position: center;
+  align-items: center;
+  background-repeat: no-repeat ;
   color: #ffffff;
   text-align: center;
   -webkit-transition-duration: 500ms;
@@ -525,8 +532,8 @@ input:required {
       right: 20px;
       bottom: 20px; } }
   #scrollUp:focus, #scrollUp:hover {
-    background-color: #000000;
-    color: #ffffff; }
+    background-color: #ffffff;
+    color: #000000; }
 
 /* :: 6.0 Buttons Area CSS */
 .btn:focus {
@@ -853,12 +860,20 @@ input:required {
   position: relative;
   z-index: 1;
   overflow: hidden; }
+  .welcome-slides .owl-prev{
+      background-image: url(img/core-img/arrow_left.png);
+  }
+  .welcome-slides .owl-next{
+      background-image: url(img/core-img/arrow_right.png);
+  }
   .welcome-slides .owl-prev,
   .welcome-slides .owl-next {
     -webkit-transition-duration: 500ms;
     -o-transition-duration: 500ms;
     transition-duration: 500ms;
     border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
     position: absolute;
     width: 46px;
     height: 46px;
