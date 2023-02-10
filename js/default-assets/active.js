@@ -92,7 +92,8 @@
           {id: 'scrollWork', target: 'toWork', offset: -75},
           {id: 'scrollPaperPresent', target: 'toPaperPresent', offset: -75},
           {id: 'scrollSchedule', target: 'toSchedule', offset: -75},
-          {id: 'scrollEventNav', target: 'toEventNav', offset: -75}
+          {id: 'scrollEventNav', target: 'toEventNav', offset: -75},
+          {id: 'scrollTeams', target: 'toTeams', offset: -75}
         ];
 
         for (var i = 0; i < scrollTargets.length; i++) {
@@ -331,31 +332,63 @@
     //     });
     // }
 
+    // **************
+
+        const countDownDate = new Date("Mar 11, 2023 15:37:25").getTime();
+        const clockElement = document.getElementById("clock");
+
+        const updateClock = () => {
+          const now = Date.now();
+          const distance = countDownDate - now;
+          
+          if (distance < 0) {
+            clearInterval(countdownInterval);
+            clockElement.innerHTML = "The count down has ended.";
+            return;
+          }
+
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          clockElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }
+
+        const countdownInterval = setInterval(updateClock, 1000);
+        updateClock();
+
+
+
+    //****************
+
+
+
     // Set the date we're counting down to
-var countDownDate = new Date("Mar 11, 2023 15:37:25").getTime();
+// var countDownDate = new Date("Mar 11, 2023 15:37:25").getTime();
 
-// Update the count down every 1 second
-var x = setInterval(function() {
+// // Update the count down every 1 second
+// var x = setInterval(function() {
 
-  // Get today's date and time
-  var now = new Date().getTime();
+//   // Get today's date and time
+//   var now = new Date().getTime();
     
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
+//   // Find the distance between now and the count down date
+//   var distance = countDownDate - now;
     
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+//   // Time calculations for days, hours, minutes and seconds
+//   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+//   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+//   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+//   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
-  // Output the result in an element with id="demo"
-  document.getElementById("clock").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
+//   // Output the result in an element with id="demo"
+//   document.getElementById("clock").innerHTML = days + "d " + hours + "h "
+//   + minutes + "m " + seconds + "s ";
     
-  // If the count down is over, write some text 
+//   // If the count down is over, write some text 
   
-}, 1000);
+// }, 1000);
 
     // ****************************
     // :: 13.0 Scrollup Active Code
