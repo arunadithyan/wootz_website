@@ -8,11 +8,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>About Us</title>
+    <title>EVENTS</title>
 
     <link rel="icon" href="img/core-img/favicon.png">
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"  href="css/our_teams.css">
+ 	<link rel="stylesheet"  href="css/our_teams_responsive.css">
+
     <script nonce="3f566577-a9b3-4c4e-856d-ea8b7e592f43">(function(w,d){!function(f,g,h,i){f[h]=f[h]||{};f[h].executed=[];f.zaraz={deferred:[],listeners:[]};f.zaraz.q=[];f.zaraz._f=function(j){return function(){var k=Array.prototype.slice.call(arguments);f.zaraz.q.push({m:j,a:k})}};for(const l of["track","set","debug"])f.zaraz[l]=f.zaraz._f(l);f.zaraz.init=()=>{var m=g.getElementsByTagName(i)[0],n=g.createElement(i),o=g.getElementsByTagName("title")[0];o&&(f[h].t=g.getElementsByTagName("title")[0].text);f[h].x=Math.random();f[h].w=f.screen.width;f[h].h=f.screen.height;f[h].j=f.innerHeight;f[h].e=f.innerWidth;f[h].l=f.location.href;f[h].r=g.referrer;f[h].k=f.screen.colorDepth;f[h].n=g.characterSet;f[h].o=(new Date).getTimezoneOffset();if(f.dataLayer)for(const s of Object.entries(Object.entries(dataLayer).reduce(((t,u)=>({...t[1],...u[1]})))))zaraz.set(s[0],s[1],{scope:"page"});f[h].q=[];for(;f.zaraz.q.length;){const v=f.zaraz.q.shift();f[h].q.push(v)}n.defer=!0;for(const w of[localStorage,sessionStorage])Object.keys(w||{}).filter((y=>y.startsWith("_zaraz_"))).forEach((x=>{try{f[h]["z_"+x.slice(7)]=JSON.parse(w.getItem(x))}catch{f[h]["z_"+x.slice(7)]=w.getItem(x)}}));n.referrerPolicy="origin";n.src="../../cdn-cgi/zaraz/sd0d9.js?z="+btoa(encodeURIComponent(JSON.stringify(f[h])));m.parentNode.insertBefore(n,m)};["complete","interactive"].includes(g.readyState)?zaraz.init():f.addEventListener("DOMContentLoaded",zaraz.init)}(w,d,"zarazData","script");})(window,document);</script></head>
     <body>
 
@@ -42,12 +45,9 @@
                             <div class="classynav">
                                 <ul id="nav">
                                     <li class="active"><a href="index-2.html">Home</a></li>
-                                    <li><a href="speakers.html">Events</a></li>
                                     <li><a href="schedule.html">Schedule</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
-
-                                    <li><a href="speakers.html">Speakears</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="contact.html">Sponsors</a></li>
+                                    <li><a href="about.html">About Us</a></li>
                                 </ul>
 
                                 <a href="#" class="btn confer-btn mt-3 mt-lg-0 ml-3 ml-lg-5">REGISTER NOW <i class="zmdi zmdi-long-arrow-right"></i></a>
@@ -92,41 +92,21 @@
 			</div>
 			<div class="row">
 
-				<div class="col-12 col-md-6 col-xl-3">
-					<div class="single-we-offer-content text-center wow fadeInUp" data-wow-delay="0.3s">
-
+				<div class="col-12 col-md-6 col-xl-3 " id="scrollSpy">
+					<a href="#toSpeaker">
+						<div class="single-we-offer-content text-center wow fadeInUp" data-wow-delay="0.3s">
 						<div class="offer-icon">
-							<img src="img/core-img/icon.png" alt="">
+								<img src="img/core-img/icon.png" alt="">
+							</div>
+							<h5>Conference</h5>
+							<p>Nam libero tempore, cum soluta nobis est eligendi optio cumque</p>
 						</div>
-						<h5>Conference</h5>
-						<p>Nam libero tempore, cum soluta nobis est eligendi optio cumque</p>
-					</div>
+					</a>
 				</div>
 
-				<div class="col-12 col-md-6 col-xl-3">
-					<div class="single-we-offer-content text-center wow fadeInUp" data-wow-delay="0.3s">
-
-						<div class="offer-icon">
-							<img src="img/core-img/icon-2.png" alt="">
-						</div>
-						<h5>Workshops</h5>
-						<p>Temporibus autem quibusdam et aut officiis debitis aut rerum</p>
-					</div>
-				</div>
-
-				<div class="col-12 col-md-6 col-xl-3">
-					<div class="single-we-offer-content text-center wow fadeInUp" data-wow-delay="0.3s">
-
-						<div class="offer-icon">
-							<img src="img/core-img/icon-3.png" alt="">
-						</div>
-						<h5>Paper Presentation</h5>
-						<p>Discovering Solutions by presenting work that shapes the Future</p>
-					</div>
-				</div>
-
-				<div class="col-12 col-md-6 col-xl-3">
-					<div class="single-we-offer-content text-center wow fadeInUp" data-wow-delay="0.3s">
+				<div class="col-12 col-md-6 col-xl-3" id="scrollEvent">
+					<a href="#toEvent">
+						<div class="single-we-offer-content text-center wow fadeInUp" data-wow-delay="0.3s">
 
 						<div class="offer-icon">
 							<img src="img/core-img/icon-4.png" alt="">
@@ -134,55 +114,44 @@
 						<h5>Events</h5>
 						<p>These cases are perfectly simple and easy to distinguish in a free hour</p>
 					</div>
+					</a>
 				</div>
+
+				<div class="col-12 col-md-6 col-xl-3" id="scrollWork">
+					<a href="#toWork">
+						<div class="single-we-offer-content text-center wow fadeInUp" data-wow-delay="0.3s">
+
+						<div class="offer-icon">
+							<img src="img/core-img/icon-2.png" alt="">
+						</div>
+						<h5>Workshops</h5>
+						<p>Temporibus autem quibusdam et aut officiis debitis aut rerum</p>
+					</div>
+					</a>
+				</div>
+
+				<div class="col-12 col-md-6 col-xl-3" id="scrollPaper">
+					<a href="#toPaperPresent">
+						<div class="single-we-offer-content text-center wow fadeInUp" data-wow-delay="0.3s">
+
+						<div class="offer-icon">
+							<img src="img/core-img/icon-3.png" alt="">
+						</div>
+						<h5>Paper Presentation</h5>
+						<p>Discovering Solutions by presenting work that shapes the Future</p>
+					</div>
+					</a>
+				</div>
+
+				
 			</div>
 		</div>
 	</section>
 
 
-	<section class="about-us-countdown-area section-padding-100-0" id="about">
-		<div class="container">
-			<div class="row align-items-center">
+	
 
-				<div class="col-12 col-md-6">
-					<div class="about-content-text mb-80">
-						<h6 class="wow fadeInUp" data-wow-delay="300ms">About US</h6>
-<h3 class="wow fadeInUp" data-wow-delay="300ms">Welcome to the Department of METALLURGICAL ENGINNERING</h3>
-<p class="wow fadeInUp" data-wow-delay="300ms">Metallurgy encompasses both the science and the technology of metals; that is, the way in which science is applied to the production of metals, and the engineering of metal components used in products for both consumers and manufacturers. Metallurgy is distinct from the craft of metalworking.</p>
-<a href="https://www.psgtech.edu/hme.php?var=MTL" target="-_blank" class="btn confer-btn mt-50 wow fadeInUp" data-wow-delay="300ms">KNOW MORE <i class="zmdi zmdi-long-arrow-right"></i></a>
-					</div>
-				</div>
-
-				<div class="col-12 col-md-6">
-					<div class="about-thumb mb-80 wow fadeInUp" data-wow-delay="300ms">
-						<img src="img/bg-img/2.png" alt="">
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="countdown-up-area">
-			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-12 col-md-3">
-
-						<div class="countdown-content-text mb-100 wow fadeInUp" data-wow-delay="300ms">
-							<h6>Event Date</h6>
-							<h4>Count Every Second Until the Event</h4>
-						</div>
-					</div>
-					<div class="col-12 col-md-9">
-						<div class="countdown-timer mb-100 wow fadeInUp" data-wow-delay="300ms">
-							<div id="clock"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-
-	<section class="our-speaker-area section-padding-100-60">
+	<section id="toSpeaker" class="our-speaker-area section-padding-100-60 wow fadeInUp" data-wow-delay="300ms">
 		<div class="container">
 			<div class="row">
 
@@ -262,50 +231,162 @@
 
 
 </section>
+	
+	<section id="toEvent">
+			<div class="responsive-container-block outer-container wow fadeInUp" data-wow-delay="300ms">
+    <div class="responsive-container-block inner-container">
+    <p class="text-blk section-head-text">
+      Events
+    </p>
+    <p class="text-blk section-subhead-text">
+     Experience the excitement.
+    </p>
+    <div class="responsive-container-block">
+      <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container wow fadeInUp" data-wow-delay="300ms">
+        <div class="team-card event-change">
+          <div class="img-wrapper">
+            <img class="team-img" src="img/bg-img/61.png">
+          </div>
+          <p class="text-blk name event-name">
+            DEFECTO
+          </p>
+          <p class="text-blk position text-center">
+            Mastering the Art of Failure Analysis
+          </p>
+             <div class="col-12">
+               <div class="section-heading-2 text-center wow fadeInUp" data-wow-delay="300ms">
+                    <p><a href="">Know More</a></p>
+                       
+                </div>
+             </div>
+        </div>
+      </div>
+
+       <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container wow fadeInUp" data-wow-delay="300ms">
+        <div class="team-card event-change">
+          <div class="img-wrapper">
+            <img class="team-img" src="img/bg-img/62.png">
+          </div>
+          <p class="text-blk name event-name">
+            FUSE 'N' SEAL
+          </p>
+          <p class="text-blk position text-center">
+            Weld Your Way <br> to Success
+          </p>
+ 			<div class="col-12">
+               <div class="section-heading-2 text-center wow fadeInUp" data-wow-delay="300ms">
+                    <p><a href="">Know More</a></p>
+                       
+                </div>
+             </div>
+        </div>
+      </div>
+
+             <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container wow fadeInUp" data-wow-delay="300ms">
+        <div class="team-card event-change">
+          <div class="img-wrapper">
+            <img class="team-img" src="img/bg-img/63.png">
+          </div>
+          <p class="text-blk name event-name">
+            MECHASTUTE
+          </p>
+          <p class="text-blk position text-center text-wrap">
+            Design, Analyze <br> and Win
+          </p>
+            <div class="col-12">
+               <div class="section-heading-2 text-center wow fadeInUp" data-wow-delay="300ms">
+                   <p><a href="">Know More</a></p>
+                       
+                </div>
+             </div>
+        </div>
+      </div>
+
+       <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container wow fadeInUp" data-wow-delay="300ms">
+        <div class="team-card event-change">
+          <div class="img-wrapper">
+            <img class="team-img" src="img/bg-img/64.png">
+          </div>
+          <p class="text-blk name event-name">
+            MATICIA
+          </p>
+          <p class="text-blk position text-center">
+            Materials in the <br>Spotlight
+          </p>
+            <div class="col-12">
+               <div class="section-heading-2 text-center wow fadeInUp" data-wow-delay="300ms">
+                    <p><a href="">Know More</a></p>
+                       
+                </div>
+             </div>
+        </div>
+      </div>
 
 
-<div class="our-gallery-area section-padding-0-85">
-	<div class="container-fluid">
-		<div class="row">
+	</section>
 
-			<div class="col-12 col-sm-3">
-				<div class="single-gallery-thumb wow fadeInUp" data-wow-delay="300ms">
-					<img src="img/bg-img/28.jpg" alt="">
-				</div>
-			</div>
 
-			<div class="col-12 col-sm-3">
-				<div class="single-gallery-thumb wow fadeInUp" data-wow-delay="300ms">
-					<img src="img/bg-img/29.jpg" alt="">
-				</div>
-			</div>
+		<section id="toWork">
+			<div class="responsive-container-block outer-container wow fadeInUp" data-wow-delay="300ms">
+    <div class="responsive-container-block inner-container">
+    <p class="text-blk section-head-text">
+      Workshops
+    </p>
+    <p class="text-blk section-subhead-text">
+     Join the experts for a hands-on experience in Metallurgy.
+    </p>
+    <div class="responsive-container-block">
+      <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container wow fadeInUp" data-wow-delay="300ms">
+        <div class="team-card">
+          <div class="img-wrapper">
+            <img class="team-img" src="img/bg-img/65.png">
+          </div>
+          <p class="text-blk name text-center">
+            Intellectual, practical, visionary.
+          </p>
+			<br>
+               <div class="col-12">
+               <div class="section-heading-2 text-center wow fadeInUp" data-wow-delay="300ms">
+                    <p><a href="">Know More</a></p>
+                       
+                </div>
+             </div>
+        </div>
+      </div>
 
-			<div class="col-12 col-sm-6">
-				<div class="single-gallery-thumb wow fadeInUp" data-wow-delay="300ms">
-					<img src="img/bg-img/30.jpg" alt="">
-				</div>
-			</div>
 
-			<div class="col-12 col-sm-6">
-				<div class="single-gallery-thumb wow fadeInUp" data-wow-delay="300ms">
-					<img src="img/bg-img/31.jpg" alt="">
-				</div>
-			</div>
+	</section>
 
-			<div class="col-12 col-sm-3">
-				<div class="single-gallery-thumb wow fadeInUp" data-wow-delay="300ms">
-					<img src="img/bg-img/32.jpg" alt="">
-				</div>
-			</div>
 
-			<div class="col-12 col-sm-3">
-				<div class="single-gallery-thumb wow fadeInUp" data-wow-delay="300ms">
-					<img src="img/bg-img/33.jpg" alt="">
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+	<section id="toPaperPresent">
+			<div class="responsive-container-block outer-container wow fadeInUp" data-wow-delay="300ms">
+    <div class="responsive-container-block inner-container">
+    <p class="text-blk section-head-text">
+      Paper Presentation
+    </p>
+    <p class="text-blk section-subhead-text">
+     Setting the Stage for the Future of Metallurgy.
+    </p>
+    <div class="responsive-container-block">
+      <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container wow fadeInUp" data-wow-delay="300ms">
+        <div class="team-card">
+          <div class="img-wrapper">
+            <img class="team-img" src="img/bg-img/66.png">
+          </div>
+          <p class="text-blk name text-center">
+            Not here to give you papercuts
+          </p>
+			<br>
+            <div class="col-12">
+               <div class="section-heading-2 text-center wow fadeInUp" data-wow-delay="300ms">
+                    <p><a href="">Know More</a></p>
+                       
+                </div>
+             </div>
+        </div>
+      </div>
+
+ 	</section>
 
 
 

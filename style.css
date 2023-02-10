@@ -186,6 +186,10 @@ ul {
   -webkit-box-shadow: 0px 8px 27px 0px rgba(90, 111, 120, 0.15);
   box-shadow: 0px 8px 27px 0px rgba(90, 111, 120, 0.15); }
 
+.event-change{
+    margin: 5%;
+}
+
 .mfp-image-holder .mfp-close,
 .mfp-iframe-holder .mfp-close {
   position: fixed;
@@ -1405,6 +1409,10 @@ input:required {
               font-size: 12px; } }
 
 /* :: 12.0 Speaker Area CSS */
+
+#to_speaker{
+  position: relative;
+}
 .our-speaker-area {
   position: relative;
   z-index: 1; }

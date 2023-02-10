@@ -74,6 +74,69 @@
         }, 800);
     });
 
+    // ******************************
+    // :: 17.0 Scrollspy Active Code
+    // ******************************
+
+        $("#scrollSpon").on('click', function () {
+        $('html, body').animate({
+            scrollTop: $("#about").offset().top - 75
+        }, 800);
+    });
+
+        $("#scrollSpy").on('click', function () {
+        $('html, body').animate({
+            scrollTop: $("#toSpeaker").offset().top - 75
+        }, 800);
+    });
+
+            $("#scrollEvent").on('click', function () {
+        $('html, body').animate({
+            scrollTop: $("#toEvent").offset().top - 64
+        }, 800);
+    });
+
+
+        $("#scrollWork").on('click', function () {
+        $('html, body').animate({
+            scrollTop: $("#toWork").offset().top - 64
+        }, 800);
+    });
+
+
+        $("#scrollPaper").on('click', function () {
+        $('html, body').animate({
+            scrollTop: $("#toPaperPresent").offset().top - 64
+        }, 800);
+    });
+
+
+
+
+
+
+        // $(document).ready(function() {
+        //   console.log($("#scrollSpy"));
+        //   console.log($("#toSpeaker"));
+        //   $("#scrollSpy").on("touchstart", function(e) {
+        //     e.preventDefault();
+        //     $('html, body').animate({
+        //       scrollTop: $("#toSpeaker").offset().top
+        //     }, 2000);
+        //   });
+        // });
+
+        // $(document).ready(function() {
+        //   $("#scrollSpy").on("touchstart", function(e) {
+        //     e.preventDefault();
+        //     var target = $("#toSpeaker").offset().top;
+        //     $('html, body').animate({
+        //       scrollTop: target
+        //     }, 2000);
+        //   });
+        // });
+   
+
     // ************************************
     // :: 4.0 Instragram Slides Active Code
     // ************************************
