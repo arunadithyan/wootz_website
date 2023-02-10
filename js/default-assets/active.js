@@ -68,47 +68,85 @@
     // :: 17.0 ScrollDown Active Code
     // ******************************
 
-    $("#scrollDown").on('click', function () {
-        $('html, body').animate({
-            scrollTop: $("#about").offset().top - 75
-        }, 800);
-    });
+    var sections = ['About','Event', 'Work', 'PaperPresent','Sponsors','Speaker'];
+
+    // for (var i = 0; i < sections.length; i++) {
+    //     $("#scroll" + sections[i]).on('click', function () {
+    //         $('html, body').animate({
+    //             scrollTop: $("#to" + sections[i]).offset().top - (i === 0 ? 40 : 64)
+    //         }, 800);
+    //     });
+    // }
+
+
 
     // ******************************
     // :: 17.0 Scrollspy Active Code
     // ******************************
 
-        $("#scrollSpon").on('click', function () {
-        $('html, body').animate({
-            scrollTop: $("#about").offset().top - 75
-        }, 800);
-    });
+    var scrollTargets = [
+          {id: 'scrollAbout', target: 'toAbout', offset: -75},
+          {id: 'scrollSponsors', target: 'toSponsors', offset: -75},
+          {id: 'scrollSpeaker', target: 'toSpeaker', offset: -75},
+          {id: 'scrollEvent', target: 'toEvent', offset: -75},
+          {id: 'scrollWork', target: 'toWork', offset: -75},
+          {id: 'scrollPaperPresent', target: 'toPaperPresent', offset: -75},
+          {id: 'scrollSchedule', target: 'toSchedule', offset: -75},
+          {id: 'scrollEventNav', target: 'toEventNav', offset: -75}
+        ];
 
-        $("#scrollSpy").on('click', function () {
-        $('html, body').animate({
-            scrollTop: $("#toSpeaker").offset().top - 75
-        }, 800);
-    });
-
-            $("#scrollEvent").on('click', function () {
-        $('html, body').animate({
-            scrollTop: $("#toEvent").offset().top - 64
-        }, 800);
-    });
-
-
-        $("#scrollWork").on('click', function () {
-        $('html, body').animate({
-            scrollTop: $("#toWork").offset().top - 64
-        }, 800);
-    });
+        for (var i = 0; i < scrollTargets.length; i++) {
+          (function (i) {
+            $("#" + scrollTargets[i].id).on('click', function () {
+              $('html, body').animate({
+                scrollTop: $("#" + scrollTargets[i].target).offset().top + scrollTargets[i].offset
+              }, 800);
+            });
+          })(i);
+        }
 
 
-        $("#scrollPaper").on('click', function () {
-        $('html, body').animate({
-            scrollTop: $("#toPaperPresent").offset().top - 64
-        }, 800);
-    });
+
+
+    // $("#scrollAbout").on('click', function () {
+    //     $('html, body').animate({
+    //         scrollTop: $("#toAbout").offset().top - 75
+    //     }, 800);
+    // });
+
+
+
+    //     $("#scrollSponsors").on('click', function () {
+    //     $('html, body').animate({
+    //         scrollTop: $("#toSponsors").offset().top -75
+    //     }, 800);
+    // });
+
+    //     $("#scrollSpeaker").on('click', function () {
+    //     $('html, body').animate({
+    //         scrollTop: $("#toSpeaker").offset().top - 75
+    //     }, 800);
+    // });
+
+    //         $("#scrollEvent").on('click', function () {
+    //     $('html, body').animate({
+    //         scrollTop: $("#toEvent").offset().top -75
+    //     }, 800);
+    // });
+
+
+    //     $("#scrollWork").on('click', function () {
+    //     $('html, body').animate({
+    //         scrollTop: $("#toWork").offset().top - 75
+    //     }, 800);
+    // });
+
+
+    //     $("#scrollPaper").on('click', function () {
+    //     $('html, body').animate({
+    //         scrollTop: $("#toPaperPresent").offset().top - 75
+    //     }, 800);
+    // });
 
 
 
