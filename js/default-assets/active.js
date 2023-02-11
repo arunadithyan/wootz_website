@@ -175,6 +175,53 @@
         //   });
         // });
    
+     
+
+
+    // ************************************
+    // :: Modal Code
+    // ************************************
+     // Get the modal
+            var modal = document.getElementById("myModal");
+
+            // Get the button that opens the modal
+            var modalBtn = document.getElementById("modalBtn");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("closeBtn")[0];
+
+            // Get the background overlay
+            var overlay = document.getElementById("modalOverlay");
+
+            // When the user clicks the button, open the modal
+            modalBtn.onclick = function() {
+              modal.style.display = "block";
+              overlay.style.display = "block";
+              localStorage.setItem("modal", "open");
+            };
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+              modal.style.display = "none";
+              overlay.style.display = "none";
+              localStorage.removeItem("modal");
+            };
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+                overlay.style.display = "none";
+                localStorage.removeItem("modal");
+              }
+            };
+
+            // Check if the modal was open previously
+            if (localStorage.getItem("modal") === "open") {
+              modal.style.display = "block";
+              overlay.style.display = "block";
+            }
+   
 
     // ************************************
     // :: 4.0 Instragram Slides Active Code
