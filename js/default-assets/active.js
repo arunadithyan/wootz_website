@@ -181,47 +181,169 @@
     // ************************************
     // :: Modal Code
     // ************************************
-     // Get the modal
-            var modal = document.getElementById("myModal");
+   // Get the modal
+var modal1 = document.getElementById("myModal1");
+var modal2 = document.getElementById("myModal2");
+var modal3 = document.getElementById("myModal3");
+var modal4 = document.getElementById("myModal4");
+var modal5 = document.getElementById("myModal5");
+var modal6 = document.getElementById("myModal6");
 
-            // Get the button that opens the modal
-            var modalBtn = document.getElementById("modalBtn");
 
-            // Get the <span> element that closes the modal
-            var span = document.getElementsByClassName("closeBtn")[0];
 
-            // Get the background overlay
-            var overlay = document.getElementById("modalOverlay");
+// Get the button that opens the modal
+var modalBtn1 = document.getElementById("modalBtn1");
+var modalBtn2 = document.getElementById("modalBtn2");
+var modalBtn3 = document.getElementById("modalBtn3");
+var modalBtn4 = document.getElementById("modalBtn4");
+var modalBtn5 = document.getElementById("modalBtn5");
+var modalBtn6 = document.getElementById("modalBtn6");
 
-            // When the user clicks the button, open the modal
-            modalBtn.onclick = function() {
-              modal.style.display = "block";
-              overlay.style.display = "block";
-              localStorage.setItem("modal", "open");
-            };
 
-            // When the user clicks on <span> (x), close the modal
-            span.onclick = function() {
-              modal.style.display = "none";
-              overlay.style.display = "none";
-              localStorage.removeItem("modal");
-            };
+// Get the <span> element that closes the modal
+var span1 = document.getElementsByClassName("closeBtn1")[0];
+var span2 = document.getElementsByClassName("closeBtn2")[0];
+var span3 = document.getElementsByClassName("closeBtn3")[0];
+var span4 = document.getElementsByClassName("closeBtn4")[0];
+var span5 = document.getElementsByClassName("closeBtn5")[0];
+var span6 = document.getElementsByClassName("closeBtn6")[0];
 
-            // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function(event) {
-              if (event.target == modal) {
-                modal.style.display = "none";
-                overlay.style.display = "none";
-                localStorage.removeItem("modal");
-              }
-            };
 
-            // Check if the modal was open previously
-            if (localStorage.getItem("modal") === "open") {
-              modal.style.display = "block";
-              overlay.style.display = "block";
-            }
-   
+// Get the background overlay
+var overlay1 = document.getElementById("modalOverlay1");
+var overlay2 = document.getElementById("modalOverlay2");
+var overlay3 = document.getElementById("modalOverlay3");
+var overlay4 = document.getElementById("modalOverlay4");
+var overlay5 = document.getElementById("modalOverlay5");
+var overlay6 = document.getElementById("modalOverlay6");
+
+
+
+
+// When the user clicks the button, open the modal
+modalBtn1.onclick = function() {
+  modal1.style.display = "block";
+  overlay1.style.display = "block";
+  localStorage.setItem("modal", "open");
+};
+
+modalBtn2.onclick = function() {
+  modal2.style.display = "block";
+  overlay2.style.display = "block";
+  localStorage.setItem("modal", "open");
+};
+modalBtn3.onclick = function() {
+  modal3.style.display = "block";
+  overlay3.style.display = "block";
+  localStorage.setItem("modal", "open");
+};
+
+modalBtn4.onclick = function() {
+  modal4.style.display = "block";
+  overlay4.style.display = "block";
+  localStorage.setItem("modal", "open");
+};
+
+modalBtn5.onclick = function() {
+  modal5.style.display = "block";
+  overlay5.style.display = "block";
+  localStorage.setItem("modal", "open");
+};
+
+modalBtn6.onclick = function() {
+  modal6.style.display = "block";
+  overlay6.style.display = "block";
+  localStorage.setItem("modal", "open");
+};
+
+
+// When the user clicks on <span> (x), close the modal
+
+span1.onclick = function() {
+  modal1.style.display = "none";
+  overlay1.style.display = "none";
+  localStorage.removeItem("modal");
+};
+
+span2.onclick = function() {
+  modal2.style.display = "none";
+  overlay2.style.display = "none";
+  localStorage.removeItem("modal");
+};
+span3.onclick = function() {
+  modal3.style.display = "none";
+  overlay3.style.display = "none";
+  localStorage.removeItem("modal");
+};
+
+span4.onclick = function() {
+  modal4.style.display = "none";
+  overlay4.style.display = "none";
+  localStorage.removeItem("modal");
+};
+span5.onclick = function() {
+  modal5.style.display = "none";
+  overlay5.style.display = "none";
+  localStorage.removeItem("modal");
+};
+
+span6.onclick = function() {
+  modal6.style.display = "none";
+  overlay6.style.display = "none";
+  localStorage.removeItem("modal");
+};
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal1) {
+    modal1.style.display = "none";
+    overlay1.style.display = "none";
+    localStorage.removeItem("modal");
+  } else if (event.target == modal2) {
+    modal2.style.display = "none";
+    overlay2.style.display = "none";
+    localStorage.removeItem("modal");
+  }
+  else if (event.target == modal3) {
+    modal3.style.display = "none";
+    overlay3.style.display = "none";
+    localStorage.removeItem("modal");
+  }
+  else if (event.target == modal4) {
+    modal4.style.display = "none";
+    overlay4.style.display = "none";
+    localStorage.removeItem("modal");
+  }
+  else if (event.target == modal5) {
+    modal5.style.display = "none";
+    overlay5.style.display = "none";
+    localStorage.removeItem("modal");
+  }
+  else if (event.target == modal6) {
+    modal6.style.display = "none";
+    overlay6.style.display = "none";
+    localStorage.removeItem("modal");
+  }
+};
+
+
+// Check if the modal was open previously
+if (localStorage.getItem("modal") === "open") {
+  modal5.style.display = "block";
+  overlay1.style.display = "block";
+  modal2.style.display = "block";
+  overlay2.style.display = "block";
+  modal3.style.display = "block";
+  overlay3.style.display = "block";
+  modal4.style.display = "block";
+  overlay4.style.display = "block";
+  modal5.style.display = "block";
+  overlay5.style.display = "block";
+  modal6.style.display = "block";
+  overlay6.style.display = "block";
+}
+
+
 
     // ************************************
     // :: 4.0 Instragram Slides Active Code

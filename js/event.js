@@ -1,88 +1,47 @@
-(function($) {
-	"use strict"
 
-	// Scrollspy
-	$('body').scrollspy({
-		target: '#nav',
-		offset: $(window).height() / 2
-	});
+// Get the modals
+var modals = document.querySelectorAll('.modal');
 
-	// Mobile nav toggle
-	$('.navbar-toggle').on('click',function() {
-		$('.main-nav').toggleClass('open');
-	});
+// Get the buttons that open the modal
+var modalBtns = document.querySelectorAll('.modalBtn');
 
-	// Fixed nav
-	$(window).on('scroll', function() {
-		var wScroll = $(this).scrollTop();
-		wScroll > 50 ? $('#header').addClass('fixed-navbar') : $('#header').removeClass('fixed-navbar');
-	});
+// Get the <span> element that closes the modal
+var spans = document.querySelectorAll('.closeBtn');
 
-	// Smooth scroll
-	$(".main-nav a[href^='#']").on('click', function(e) {
-		e.preventDefault();
-		var hash = this.hash;
-		$('html, body').animate({
-			scrollTop: $(this.hash).offset().top
-		}, 800);
-	});
+// Get the background overlay
+var overlays = document.querySelectorAll('.modalOverlay');
 
-	// Section title animation
-	$('.section-title').each(function() {
-		var $this = $(this);
-		$this.find('.title > span').each(function(i) {
-			var $span = $(this);
-			var animated = new Waypoint({
-				element: $this,
-				handler: function()
-				{
-					setTimeout(function(){
-						$span.addClass('appear')
-					}, i*250);
-					this.destroy();
-				},
-				offset: '95%'
-			});
-		});
-	});
+// Loop through each modalBtn and assign click event
+modalBtns.forEach(function(modalBtn, index) {
+  modalBtn.addEventListener('click', function() {
+    modals[index].style.display = 'block';
+    overlays[index].style.display = 'block';
+    localStorage.setItem('modal', 'open');
+  });
+});
 
-	// Galery Owl
-	$('#galery-owl').owlCarousel({
-		items:1,
-		loop:true,
-		margin:0,
-		dots : false,
-		nav: true,
-		navText : ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
-		autoplay : true,
-		autoplaySpeed :500,
-		navSpeed :500,
-		responsive : {
-	    0 : {
-	       stagePadding : 0,
-	    },
-	    768 : {
-	        stagePadding : 120,
-	    }
-		}
-	});
+// Loop through each span and assign click event
+spans.forEach(function(span, index) {
+  span.addEventListener('click', function() {
+    modals[index].style.display = 'none';
+    overlays[index].style.display = 'none';
+    localStorage.removeItem('modal');
+  });
+});
 
-	// Parallax Background
-	$.stellar({
-		responsive: true
-	});
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  modals.forEach(function(modal, index) {
+    if (event.target == modal) {
+      modal.style.display = 'none';
+      overlays[index].style.display = 'none';
+      localStorage.removeItem('modal');
+    }
+  });
+};
 
-	// CountTo
-	$('.counter').each(function() {
-		var $this = $(this);
-		var counter = new Waypoint({
-			element: $this,
-			handler: function()
-			{
-				$this.countTo();
-			},
-			offset: '95%'
-		});
-	});
-
-})(jQuery);
+ $(document).ready(function() {
+    $('.closeButton').click(function() {
+      $('.myModal').modal('hide');
+    });
+  });

@@ -158,7 +158,9 @@
 
 
 /*Modals*/
-#myModal {
+
+
+#myModal1, #myModal2 ,#myModal3, #myModal4 ,#myModal5, #myModal6 {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -201,7 +203,7 @@
 }
 
 /* Modal Overlay */
-#modalOverlay {
+#modalOverlay1, #modalOverlay2,#modalOverlay3, #modalOverlay4,#modalOverlay5, #modalOverlay6  {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 0; /* Sit behind the modal */
@@ -234,10 +236,10 @@
   }
 }
 
-#modal-content-head img{
-  align-items: center;
-  display: flex;
-  margin: auto;
+.modal-content-head img{
+    align-items: center;
+   display: flex;
+    margin: auto;
     width: 25%;
     height: 30%;
 
@@ -257,4 +259,5 @@
      width: 100%;
      position: relative;
      text-align: center;
+    
 }
