@@ -223,8 +223,27 @@ ul {
   line-height: 30px; }
 
 .clg_venue-map iframe{
-    border-radius: 15px;
+  border-radius: 15px;
+  width: 100%;
+  height: 380px;
 }
+
+@media screen and (min-width: 768px) {
+  .clg_venue-map iframe {
+    width: 550px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .clg_venue-map iframe {
+    width: 90%;
+    margin: 10% 5vw 10% 5vw;
+    height: 45;
+    border-radius: 15px;
+  }
+}
+
+
 .cont_add p, h6{
   line-height: 30px;
 }
@@ -1431,6 +1450,11 @@ input:required {
 
 /* :: 12.0 Speaker Area CSS */
 
+#event-speakers{
+    flex-wrap: wrap;  
+}
+
+
 #to_speaker{
   position: relative;
 }
@@ -2200,6 +2224,38 @@ input:required {
 
 
 /* 16.0 Client Area CSS */
+.owl-img1 {
+  background-image: url(img/bg-img/1.jpg);
+  background-size: cover; /* makes the image cover the entire container */
+}
+
+.owl-img2 {
+  background-image: url(img/bg-img/45.jpg);
+  background-size: cover;
+}
+
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 767px) {
+  .owl-img1 {
+    background-image: url(img/bg-img/1-mobile.gif); /* replace with a smaller version of the image for mobile */
+  }
+  
+  .owl-img2 {
+    background-image: url(img/bg-img/1-mobile.gif); /* replace with a smaller version of the image for mobile */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .our-client-area {
   position: relative;
   z-index: 1; }
@@ -2827,3 +2883,5 @@ input:required {
         margin-right: 3px; }
 
 /*# sourceMappingURL=style.css.map */
+
+
