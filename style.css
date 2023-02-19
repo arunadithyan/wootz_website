@@ -2885,3 +2885,109 @@ input:required {
 /*# sourceMappingURL=style.css.map */
 
 
+
+
+/* Countdown */
+.flipdown {
+  display: flex;
+  align-items: center;
+}
+
+.flipdown__piece {
+  min-width: 40px;
+  text-align: center;
+  background-color: #f2f2f2;
+  color: #333;
+  font-size: 36px;
+  margin: 0 5px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.flipdown__slot {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  line-height: 1;
+}
+
+.flipdown__slot:not(:last-child) {
+  margin-right: 10px;
+}
+
+.flipdown__slot__card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.5s;
+}
+
+.flipdown__slot__card:not(:last-child) {
+  margin-right: 10px;
+}
+
+.flipdown__slot__card__top {
+  transform: rotateX(0deg);
+}
+
+.flipdown__slot__card__bottom {
+  transform: rotateX(90deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flipdown__slot__card__bottom--alt {
+  transform: rotateX(-90deg);
+}
+
+.flipdown__slot__card__digit {
+  font-size: 36px;
+  line-height: 1;
+  font-weight: bold;
+  transform-style: preserve-3d;
+}
+
+.flipdown__slot__card__digit__side {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+}
+
+.flipdown__slot__card__digit__side--back {
+  transform: rotateX(-90deg);
+}
+
+.flipdown__slot__card__digit__side--front {
+  transform: rotateX(0deg);
+}
+
+.flipdown__slot__card__digit__side--hidden {
+  visibility: hidden;
+}
+
+.flipdown__slot__card__digit__side--wrap {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+}
+@media only screen and (max-width: 767px) {
+  .countdown-timer {
+    font-size: 1.5em;
+  }
+}

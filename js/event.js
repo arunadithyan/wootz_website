@@ -1,47 +1,75 @@
+var modals = [  document.getElementById("myModal1"),  document.getElementById("myModal2"),  document.getElementById("myModal3"),  document.getElementById("myModal4"),  document.getElementById("myModal5"),  document.getElementById("myModal6")];
 
-// Get the modals
-var modals = document.querySelectorAll('.modal');
+var modalBtns = [  document.getElementById("modalBtn1"),  document.getElementById("modalBtn2"),  document.getElementById("modalBtn3"),  document.getElementById("modalBtn4"),  document.getElementById("modalBtn5"),  document.getElementById("modalBtn6")];
 
-// Get the buttons that open the modal
-var modalBtns = document.querySelectorAll('.modalBtn');
+var spans = [  document.getElementsByClassName("closeBtn1")[0],
+  document.getElementsByClassName("closeBtn2")[0],
+  document.getElementsByClassName("closeBtn3")[0],
+  document.getElementsByClassName("closeBtn4")[0],
+  document.getElementsByClassName("closeBtn5")[0],
+  document.getElementsByClassName("closeBtn6")[0]
+];
 
-// Get the <span> element that closes the modal
-var spans = document.querySelectorAll('.closeBtn');
+var overlays = [  document.getElementById("modalOverlay1"),  document.getElementById("modalOverlay2"),  document.getElementById("modalOverlay3"),  document.getElementById("modalOverlay4"),  document.getElementById("modalOverlay5"),  document.getElementById("modalOverlay6")];
 
-// Get the background overlay
-var overlays = document.querySelectorAll('.modalOverlay');
 
-// Loop through each modalBtn and assign click event
-modalBtns.forEach(function(modalBtn, index) {
-  modalBtn.addEventListener('click', function() {
-    modals[index].style.display = 'block';
-    overlays[index].style.display = 'block';
-    localStorage.setItem('modal', 'open');
-  });
-});
+for (var i = 0; i < modals.length; i++) {
+  modalBtns[i].addEventListener("click", createOpenModalHandler(modals[i], overlays[i]));
+  spans[i].addEventListener("click", createCloseModalHandler(modals[i], overlays[i]));
+}
 
-// Loop through each span and assign click event
-spans.forEach(function(span, index) {
-  span.addEventListener('click', function() {
-    modals[index].style.display = 'none';
-    overlays[index].style.display = 'none';
-    localStorage.removeItem('modal');
-  });
-});
+function createOpenModalHandler(modal, overlay) {
+  return function() {
+    modal.style.display = "block";
+    overlay.style.display = "block";
+    localStorage.setItem("modal", "open");
+  };
+}
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  modals.forEach(function(modal, index) {
-    if (event.target == modal) {
-      modal.style.display = 'none';
-      overlays[index].style.display = 'none';
-      localStorage.removeItem('modal');
+function createCloseModalHandler(modal, overlay) {
+  return function() {
+    modal.style.display = "none";
+    overlay.style.display = "none";
+    localStorage.removeItem("modal");
+  };
+}
+
+
+window.addEventListener("click", function(event) {
+  for (var i = 0; i < modals.length; i++) {
+    if (event.target == modals[i]) {
+      modals[i].style.display = "none";
+      overlays[i].style.display = "none";
+      localStorage.removeItem("modal");
+      break;
     }
-  });
-};
+  }
+});
 
- $(document).ready(function() {
-    $('.closeButton').click(function() {
-      $('.myModal').modal('hide');
-    });
-  });
+
+if (localStorage.getItem("modal") === "open") {
+  for (var i = 0; i < modals.length; i++) {
+    modals[i].style.display = "block";
+    overlays[i].style.display = "block";
+  }
+}
+
+
+function createOpenModalHandler(modal, overlay) {
+  return function() {
+    modal.style.display = "block";
+    overlay.style.display = "block";
+    document.body.style.overflow = "hidden"; // disable scrolling
+    localStorage.setItem("modal", "open");
+  };
+}
+
+
+function createCloseModalHandler(modal, overlay) {
+  return function() {
+    modal.style.display = "none";
+    overlay.style.display = "none";
+    document.body.style.overflow = "auto"; // re-enable scrolling
+    localStorage.removeItem("modal");
+  };
+}

@@ -107,243 +107,12 @@
         }
 
 
-
-
-    // $("#scrollAbout").on('click', function () {
-    //     $('html, body').animate({
-    //         scrollTop: $("#toAbout").offset().top - 75
-    //     }, 800);
-    // });
-
-
-
-    //     $("#scrollSponsors").on('click', function () {
-    //     $('html, body').animate({
-    //         scrollTop: $("#toSponsors").offset().top -75
-    //     }, 800);
-    // });
-
-    //     $("#scrollSpeaker").on('click', function () {
-    //     $('html, body').animate({
-    //         scrollTop: $("#toSpeaker").offset().top - 75
-    //     }, 800);
-    // });
-
-    //         $("#scrollEvent").on('click', function () {
-    //     $('html, body').animate({
-    //         scrollTop: $("#toEvent").offset().top -75
-    //     }, 800);
-    // });
-
-
-    //     $("#scrollWork").on('click', function () {
-    //     $('html, body').animate({
-    //         scrollTop: $("#toWork").offset().top - 75
-    //     }, 800);
-    // });
-
-
-    //     $("#scrollPaper").on('click', function () {
-    //     $('html, body').animate({
-    //         scrollTop: $("#toPaperPresent").offset().top - 75
-    //     }, 800);
-    // });
-
-
-
-
-
-
-        // $(document).ready(function() {
-        //   console.log($("#scrollSpy"));
-        //   console.log($("#toSpeaker"));
-        //   $("#scrollSpy").on("touchstart", function(e) {
-        //     e.preventDefault();
-        //     $('html, body').animate({
-        //       scrollTop: $("#toSpeaker").offset().top
-        //     }, 2000);
-        //   });
-        // });
-
-        // $(document).ready(function() {
-        //   $("#scrollSpy").on("touchstart", function(e) {
-        //     e.preventDefault();
-        //     var target = $("#toSpeaker").offset().top;
-        //     $('html, body').animate({
-        //       scrollTop: target
-        //     }, 2000);
-        //   });
-        // });
-   
-     
-
-
+ 
+   // ************************************
+    // Modal
     // ************************************
-    // :: Modal Code
-    // ************************************
-   // Get the modal
-var modal1 = document.getElementById("myModal1");
-var modal2 = document.getElementById("myModal2");
-var modal3 = document.getElementById("myModal3");
-var modal4 = document.getElementById("myModal4");
-var modal5 = document.getElementById("myModal5");
-var modal6 = document.getElementById("myModal6");
 
-
-
-// Get the button that opens the modal
-var modalBtn1 = document.getElementById("modalBtn1");
-var modalBtn2 = document.getElementById("modalBtn2");
-var modalBtn3 = document.getElementById("modalBtn3");
-var modalBtn4 = document.getElementById("modalBtn4");
-var modalBtn5 = document.getElementById("modalBtn5");
-var modalBtn6 = document.getElementById("modalBtn6");
-
-
-// Get the <span> element that closes the modal
-var span1 = document.getElementsByClassName("closeBtn1")[0];
-var span2 = document.getElementsByClassName("closeBtn2")[0];
-var span3 = document.getElementsByClassName("closeBtn3")[0];
-var span4 = document.getElementsByClassName("closeBtn4")[0];
-var span5 = document.getElementsByClassName("closeBtn5")[0];
-var span6 = document.getElementsByClassName("closeBtn6")[0];
-
-
-// Get the background overlay
-var overlay1 = document.getElementById("modalOverlay1");
-var overlay2 = document.getElementById("modalOverlay2");
-var overlay3 = document.getElementById("modalOverlay3");
-var overlay4 = document.getElementById("modalOverlay4");
-var overlay5 = document.getElementById("modalOverlay5");
-var overlay6 = document.getElementById("modalOverlay6");
-
-
-
-
-// When the user clicks the button, open the modal
-modalBtn1.onclick = function() {
-  modal1.style.display = "block";
-  overlay1.style.display = "block";
-  localStorage.setItem("modal", "open");
-};
-
-modalBtn2.onclick = function() {
-  modal2.style.display = "block";
-  overlay2.style.display = "block";
-  localStorage.setItem("modal", "open");
-};
-modalBtn3.onclick = function() {
-  modal3.style.display = "block";
-  overlay3.style.display = "block";
-  localStorage.setItem("modal", "open");
-};
-
-modalBtn4.onclick = function() {
-  modal4.style.display = "block";
-  overlay4.style.display = "block";
-  localStorage.setItem("modal", "open");
-};
-
-modalBtn5.onclick = function() {
-  modal5.style.display = "block";
-  overlay5.style.display = "block";
-  localStorage.setItem("modal", "open");
-};
-
-modalBtn6.onclick = function() {
-  modal6.style.display = "block";
-  overlay6.style.display = "block";
-  localStorage.setItem("modal", "open");
-};
-
-
-// When the user clicks on <span> (x), close the modal
-
-span1.onclick = function() {
-  modal1.style.display = "none";
-  overlay1.style.display = "none";
-  localStorage.removeItem("modal");
-};
-
-span2.onclick = function() {
-  modal2.style.display = "none";
-  overlay2.style.display = "none";
-  localStorage.removeItem("modal");
-};
-span3.onclick = function() {
-  modal3.style.display = "none";
-  overlay3.style.display = "none";
-  localStorage.removeItem("modal");
-};
-
-span4.onclick = function() {
-  modal4.style.display = "none";
-  overlay4.style.display = "none";
-  localStorage.removeItem("modal");
-};
-span5.onclick = function() {
-  modal5.style.display = "none";
-  overlay5.style.display = "none";
-  localStorage.removeItem("modal");
-};
-
-span6.onclick = function() {
-  modal6.style.display = "none";
-  overlay6.style.display = "none";
-  localStorage.removeItem("modal");
-};
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal1) {
-    modal1.style.display = "none";
-    overlay1.style.display = "none";
-    localStorage.removeItem("modal");
-  } else if (event.target == modal2) {
-    modal2.style.display = "none";
-    overlay2.style.display = "none";
-    localStorage.removeItem("modal");
-  }
-  else if (event.target == modal3) {
-    modal3.style.display = "none";
-    overlay3.style.display = "none";
-    localStorage.removeItem("modal");
-  }
-  else if (event.target == modal4) {
-    modal4.style.display = "none";
-    overlay4.style.display = "none";
-    localStorage.removeItem("modal");
-  }
-  else if (event.target == modal5) {
-    modal5.style.display = "none";
-    overlay5.style.display = "none";
-    localStorage.removeItem("modal");
-  }
-  else if (event.target == modal6) {
-    modal6.style.display = "none";
-    overlay6.style.display = "none";
-    localStorage.removeItem("modal");
-  }
-};
-
-
-// Check if the modal was open previously
-if (localStorage.getItem("modal") === "open") {
-  modal5.style.display = "block";
-  overlay1.style.display = "block";
-  modal2.style.display = "block";
-  overlay2.style.display = "block";
-  modal3.style.display = "block";
-  overlay3.style.display = "block";
-  modal4.style.display = "block";
-  overlay4.style.display = "block";
-  modal5.style.display = "block";
-  overlay5.style.display = "block";
-  modal6.style.display = "block";
-  overlay6.style.display = "block";
-}
-
-
+ 
 
     // ************************************
     // :: 4.0 Instragram Slides Active Code
@@ -495,6 +264,49 @@ if (localStorage.getItem("modal") === "open") {
     // ****************************
     // :: 13.0 Countdown Active Code
     // ****************************
+
+            var clockDiv = document.getElementById("clock");
+
+        // Set the date we're counting down to
+        var countDownDate = new Date("Mar 11, 2023 00:00:00").getTime();
+
+        function updateCountdown() {
+          // Get the current date and time
+          var now = new Date().getTime();
+
+          // Find the distance between now and the count down date
+          var distance = countDownDate - now;
+
+          // If the count down is finished, stop the countdown and update the clock element
+          if (distance < 0) {
+            clearInterval(x);
+            clockDiv.innerHTML = "EXPIRED";
+            return;
+          }
+
+          // Calculate days, hours, minutes and seconds
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          // Update the clock element with the calculated values
+          clockDiv.innerHTML = `
+            <div>${days}<span>Days</span></div>
+            <div>${hours}<span>Hours</span></div>
+            <div>${minutes}<span>Minutes</span></div>
+            <div>${seconds}<span>Seconds</span></div>
+          `;
+        }
+
+        // Call the updateCountdown function initially to avoid a delay in the countdown starting
+        updateCountdown();
+
+        // Update the countdown every 1 second
+        var x = setInterval(updateCountdown, 1000);
+
+
+    
     // if ($.fn.countdown) {
     //     $("#clock").countdown("2023/03/11", function (event) {
     //         $(this).html(event.strftime("<div>%m <span>Months</span></div> <div>%d <span>Days</span></div> <div>%H <span>Hours</span></div> <div>%M <span>Minutes</span></div> <div>%S <span>Seconds</span></div>"));
@@ -503,61 +315,35 @@ if (localStorage.getItem("modal") === "open") {
 
     // **************
 
-        const countDownDate = new Date("Mar 11, 2023 15:37:25").getTime();
-        const clockElement = document.getElementById("clock");
+        // const countDownDate = new Date("Mar 11, 2023 15:37:25").getTime();
+        // const clockElement = document.getElementById("clock");
 
-        const updateClock = () => {
-          const now = Date.now();
-          const distance = countDownDate - now;
+        // const updateClock = () => {
+        //   const now = Date.now();
+        //   const distance = countDownDate - now;
           
-          if (distance < 0) {
-            clearInterval(countdownInterval);
-            clockElement.innerHTML = "The count down has ended.";
-            return;
-          }
+        //   if (distance < 0) {
+        //     clearInterval(countdownInterval);
+        //     clockElement.innerHTML = "The count down has ended.";
+        //     return;
+        //   }
 
-          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-          const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-          const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        //   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        //   const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        //   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        //   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-          clockElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-        }
+        //   clockElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        // }
 
-        const countdownInterval = setInterval(updateClock, 1000);
-        updateClock();
+        // const countdownInterval = setInterval(updateClock, 1000);
+        // updateClock();
 
 
 
     //****************
 
 
-
-    // Set the date we're counting down to
-// var countDownDate = new Date("Mar 11, 2023 15:37:25").getTime();
-
-// // Update the count down every 1 second
-// var x = setInterval(function() {
-
-//   // Get today's date and time
-//   var now = new Date().getTime();
-    
-//   // Find the distance between now and the count down date
-//   var distance = countDownDate - now;
-    
-//   // Time calculations for days, hours, minutes and seconds
-//   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-//   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-//   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-//   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-//   // Output the result in an element with id="demo"
-//   document.getElementById("clock").innerHTML = days + "d " + hours + "h "
-//   + minutes + "m " + seconds + "s ";
-    
-//   // If the count down is over, write some text 
-  
-// }, 1000);
 
     // ****************************
     // :: 13.0 Scrollup Active Code
