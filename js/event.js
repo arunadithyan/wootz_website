@@ -1,16 +1,16 @@
-var modals = [  document.getElementById("myModal1"),  document.getElementById("myModal2"),  document.getElementById("myModal3"),  document.getElementById("myModal4"),  document.getElementById("myModal5"),  document.getElementById("myModal6")];
+var modals = [  document.getElementById("myModal1"),  document.getElementById("myModal2"),  document.getElementById("myModal3"),  document.getElementById("myModal4"),  document.getElementById("myModal6")];
 
-var modalBtns = [  document.getElementById("modalBtn1"),  document.getElementById("modalBtn2"),  document.getElementById("modalBtn3"),  document.getElementById("modalBtn4"),  document.getElementById("modalBtn5"),  document.getElementById("modalBtn6")];
+var modalBtns = [  document.getElementById("modalBtn1"),  document.getElementById("modalBtn2"),  document.getElementById("modalBtn3"),  document.getElementById("modalBtn4"),  document.getElementById("modalBtn6")];
 
 var spans = [  document.getElementsByClassName("closeBtn1")[0],
   document.getElementsByClassName("closeBtn2")[0],
   document.getElementsByClassName("closeBtn3")[0],
   document.getElementsByClassName("closeBtn4")[0],
-  document.getElementsByClassName("closeBtn5")[0],
+  // document.getElementsByClassName("closeBtn5")[0],
   document.getElementsByClassName("closeBtn6")[0]
 ];
 
-var overlays = [  document.getElementById("modalOverlay1"),  document.getElementById("modalOverlay2"),  document.getElementById("modalOverlay3"),  document.getElementById("modalOverlay4"),  document.getElementById("modalOverlay5"),  document.getElementById("modalOverlay6")];
+var overlays = [  document.getElementById("modalOverlay1"),  document.getElementById("modalOverlay2"),  document.getElementById("modalOverlay3"),  document.getElementById("modalOverlay4"),  document.getElementById("modalOverlay6")];
 
 
 for (var i = 0; i < modals.length; i++) {
@@ -73,3 +73,15 @@ function createCloseModalHandler(modal, overlay) {
     localStorage.removeItem("modal");
   };
 }
+
+window.addEventListener("click", function(event) {
+  for (var i = 0; i < modals.length; i++) {
+    if (event.target == modals[i]) {
+      modals[i].style.display = "none";
+      overlays[i].style.display = "none";
+      localStorage.removeItem("modal");
+      document.body.style.overflow = "auto"; // re-enable scrolling
+      break;
+    }
+  }
+});

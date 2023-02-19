@@ -2734,6 +2734,19 @@ input:required {
     .our-sponsor-area .single-sponsor:hover a img, .our-sponsor-area .single-sponsor:focus a img {
       opacity: 1; }
 
+
+/*Abrstract*/
+
+#abrstract-btn{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ 
+}
+
+
+
+
 /* :: 20.0 Contact Area CSS */
 .contact-our-area {
   position: relative;
@@ -2991,3 +3004,7 @@ input:required {
     font-size: 1.5em;
   }
 }
+
+
+
+
