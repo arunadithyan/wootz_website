@@ -180,6 +180,23 @@ ul {
     background-image: -ms-linear-gradient(120deg, #df42b1 0%, #505add 100%);
     opacity: 0.9; }
 
+.bg-gradient-overlay-5 {
+  position: relative;
+  z-index: 1; }
+  .bg-gradient-overlay-5::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: #8503ff;
+    background-image: -moz-linear-gradient(120deg, #df42b1 0%, #505add 100%);
+    background-image: -webkit-linear-gradient(175deg, #ae00ff 29%, #050003 80%);
+    background-image: -ms-linear-gradient(120deg, #df42b1 0%, #505add 100%);
+    opacity: 0.9; }
+
 
 .bg-img {
   background-position: center center !important;
@@ -2630,11 +2647,47 @@ input:required {
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1); }
-    @media only screen and (max-width: 767px) {
+
+     @media only screen and (max-width: 1190px) {
       .single-ticket-pricing-table.active {
+        width: 80%;
+         margin: 0 auto;
         -webkit-transform: scale(1.05);
         -ms-transform: scale(1.05);
-        transform: scale(1.05); } }
+        transform: scale(1.05); }
+
+        #abst-tick{
+          font-size: 36px;
+        }
+
+         }
+
+         @media only screen and (max-width: 966px) {
+      .single-ticket-pricing-table.active {
+        width: 80%;
+         margin-top: 18%;
+        -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        transform: scale(1.05); }
+
+        #abst-tick{
+          font-size: 36px;
+        }
+
+         }
+    @media only screen and (max-width: 767px) {
+      .single-ticket-pricing-table.active {
+        width: 80%;
+        margin: 8% 0 8% 8%;
+        -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        transform: scale(1.05); }
+
+        #abst-tick{
+          font-size: 47px;
+        }
+
+         }
   .single-ticket-pricing-table .ticket-plan {
     background-color: #df42b1;
     padding: 10px 25px;
@@ -2883,9 +2936,15 @@ input:required {
         font-size: 30px; } }
   .call-to-action-content .event-time {
     background-color: rgba(255, 255, 255, 0.1);
-    padding: 30px 50px;
+    padding: 30px 200px;
     display: inline-block;
     border-radius: 10px; }
+
+    @media only screen and (max-width: 767px){
+      .call-to-action-content .event-time {
+       padding: 30px 100px; }
+    }
+
     .call-to-action-content .event-time p {
       font-size: 18px;
       color: #ffffff;
@@ -3005,6 +3064,16 @@ input:required {
   }
 }
 
+#toSchedule{
+  background-image: url(img/bg-img/90.jpg);
+}
 
+#event-img{
+  background-image: url(img/bg-img/69.jpg);
+}
+
+#work-img {
+  background: radial-gradient(#6f7d7c, #c2fffc);
+}
 
 
