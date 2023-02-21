@@ -2252,15 +2252,35 @@ input:required {
 }
 
 /* Media Query for Mobile Devices */
-@media only screen and (max-width: 767px) {
-  .owl-img1 {
-    background-image: url(img/bg-img/1-mobile.gif); /* replace with a smaller version of the image for mobile */
+@media (max-width: 767px) {
+  .owl-img1, .owl-img2 {
+    position: relative;
+    overflow: hidden;
   }
-  
-  .owl-img2 {
-    background-image: url(img/bg-img/1-mobile.gif); /* replace with a smaller version of the image for mobile */
+
+  .owl-img1::after, .owl-img2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-image: url(img/bg-img/1.jpg);
+    background-size: cover;
+    animation: slideBg 13s linear infinite;
+  }
+
+  @keyframes slideBg {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
   }
 }
+
 
 
 
@@ -3076,4 +3096,12 @@ input:required {
   background: radial-gradient(#6f7d7c, #c2fffc);
 }
 
+.flex1, .flex2{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
 
+.flex2 div{
+  margin-bottom: 2%;
+}
