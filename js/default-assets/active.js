@@ -268,7 +268,7 @@
             var clockDiv = document.getElementById("clock");
 
         // Set the date we're counting down to
-        var countDownDate = new Date("Mar 11, 2023 00:00:00").getTime();
+        var countDownDate = new Date("Apr 01, 2023 00:00:00").getTime();
 
         function updateCountdown() {
           // Get the current date and time
